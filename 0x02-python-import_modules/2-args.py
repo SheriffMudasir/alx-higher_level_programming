@@ -6,11 +6,9 @@ if __name__ == "__main__":
         print("{} arguments".format(0))
     elif (n) == 1:
         print("{} argument".format(1))
-        for i in range(1, n):
-            if i <= n:
-                print("{} : {}".format(i, sys.argv[i]))
+        for i, arg in enumerate(sys.argv[1:], start=1):
+            print("{}: {}".format(i, arg))
     else:
         print("{} arguments".format(len(sys.argv) - 1))
-        for i in range(0, n):
-            if i <= n:
-                print("{} : {}".format(i+1, sys.argv[i+1]))
+        for i, arg in enumerate(sys.argv[1:], start=1):
+            print("{}: {}".format(i, arg))
