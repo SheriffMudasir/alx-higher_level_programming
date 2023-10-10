@@ -32,7 +32,7 @@ void reverseList(listint_t **head)
 int is_palindrome(listint_t **head)
 {
 	if (*head == NULL)
-		return 1;
+		return (1);
 
 	listint_t *current;
 	listint_t *reversedHead;
@@ -47,10 +47,10 @@ int is_palindrome(listint_t **head)
 	{
 		if ((*head)->n != reversedHead->n)
 		{
-			return 0;
+			return (0);
 		}
 		*head = (*head)->next;
 		reversedHead = reversedHead->next;
 	}
-	return 1;
+	return (1);
 }
