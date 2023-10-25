@@ -7,15 +7,16 @@ def list_division(my_list_1, my_list_2, list_length):
             element1 = my_list_1[i] if i < len(my_list_1) else 0
             element2 = my_list_2[i] if i < len(my_list_2) else 0
 
-            if not isinstance(element1, (int, float)) or not isinstance(element2, (int, float)):
+            if (not isinstance(element1, (int, float)) or
+                    not isinstance(element2, (int, float))):
                 raise TypeError("wrong type")
-            
+
             if element2 == 0:
                 raise ZeroDivisionError("division by 0")
 
             division_result = element1 / element2
             list_of_divisions.append(division_result)
-        
+
         except ZeroDivisionError:
             print("division by 0")
             list_of_divisions.append(0)
