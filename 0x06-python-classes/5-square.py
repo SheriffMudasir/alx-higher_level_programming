@@ -1,5 +1,7 @@
+#!/usr/bin/python3
+"""Define a class Square"""
 class Square:
-    """Define a class Square"""
+    """This class Square has area and my_print function"""
 
     def __init__(self, size=0):
         """

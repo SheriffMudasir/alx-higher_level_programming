@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Define a class Square"""
 class Square:
-    """Define a class Square"""
+    """This class Square has the setters and getter property"""
 
     def __init__(self, size=0):
         """
