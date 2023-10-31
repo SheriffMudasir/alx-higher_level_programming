@@ -57,7 +57,8 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
                 return ""
         else:
-                return "\n".join(["#" * self.width] * self.height)
+            rectangle = ["#" * self.width for _ in range(self.height)]
+            return "\n".join(rectangle)
 
     def __repr__(self):
         """This function returns a representation string to recreate a new instance"""
