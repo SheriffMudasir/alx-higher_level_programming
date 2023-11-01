@@ -1,0 +1,27 @@
+# Test case 1: Check type size int
+>>> print_square(4)
+####
+####
+####
+####
+
+# Test case 2: Check type size not int
+>>> print_square("4")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 9, in print_square
+TypeError: size must be an integer
+
+# Test case 3: Check type size < 0
+>>> print_square(-4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 11, in print_square
+ValueError: size must be >= 0
+
+# Test case 3: Check type size float and < 0
+>>> print_square(-0.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 9, in print_square
+TypeError: size must be an integer

@@ -1,0 +1,56 @@
+# Test case 1: When a string is passed
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+... beatiorem! Iam ruinas videres""")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+ Quonam modo?
+
+ Utrum igitur tibi litteram videor an totas paginas commovere?
+
+ Non autem hoc:
+
+ igitur ne illud quidem.
+
+ Fortasse id optimum, sed ubi illud:
+
+ Plus semper voluptatis?
+
+ Teneo, inquit, finem illi videri nihil dolere.
+
+ Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+
+ Si id dicis, vicimus.
+
+ Inde sermone vario sex illa a Dipylo stadia confecimus.
+
+ Sin aliud quid voles, postea.
+
+ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+
+ Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+# Test case 2: When a non-string is passed
+ >>> text_indentation(4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in text_indentation
+TypeError: text must be a string
+
+# Test case 3: When  text  doesn't contain any ".", "?", or ":"
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+ incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamc
+o laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate
+velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident, sunt
+ in culpa qui officia deserunt mollit anim id est laborum""")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+ dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui
+p ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia de
+serunt mollit anim id est laborum

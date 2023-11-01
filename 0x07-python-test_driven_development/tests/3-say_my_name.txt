@@ -1,0 +1,17 @@
+# Test case 1: Check type for first name is str
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test case 2: Check type for first name is not str
+>>> say_my_name(5, "Smith")
+Traceback (most recent call last):
+  ...
+  ...
+TypeError: first_name must be a string
+
+# Test case 2: Check type for last name is not str
+>>> say_my_name("Smith", 5)
+Traceback (most recent call last):
+  ...
+  ...
+TypeError: last_name must be a string
