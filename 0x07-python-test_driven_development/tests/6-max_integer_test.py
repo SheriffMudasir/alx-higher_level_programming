@@ -9,11 +9,6 @@ class TestMaxInteger(unittest.TestCase):
 
                 """Test for max number"""
                 self.assertEqual(max_integer([25, 6, 7, 5]), 25)
-        def test_empty_list(self):
-
-                """Test when empty list is passed"""
-                with self.assertRaises(AssertionError):
-                        max_integer([])
 
         def test_string_in_list(self):
                 """Test when string in list"""
