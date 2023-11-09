@@ -1,0 +1,29 @@
+# Test 1: Testing the area method
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# Test 2: Testing integer_validator method with a valid integer
+>>> bg.integer_validator("my_int", 12)
+
+# Test 3: Testing integer_validator method with a valid integer and a different name
+>>> bg.integer_validator("width", 89)
+
+# Tese 4: Testing integer_validator method with a non-integer value
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+# Test 5: Testing integer_validator method with a non-positive integer value
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+# Test 6: Testing integer_validator method with a negative integer value
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
