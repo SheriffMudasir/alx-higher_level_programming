@@ -1,0 +1,24 @@
+# Test case 1: Create a MyList instance, append elements, and print it
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list
+[3, 1]
+
+# Test case 2: Call the print_sorted method to print the list in sorted order
+>>> my_list.print_sorted()
+[1, 3]
+
+# Test case 3: Verify that the original list remains unsorted
+>>> my_list
+[3, 1]
+
+# Test case 4: Append more elements and print the sorted list again
+>>> my_list.append(2)
+>>> my_list.append(4)
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
+
+# Test case 5: Verify that the original list is still unsorted
+>>> my_list
+[3, 1, 2, 4]
