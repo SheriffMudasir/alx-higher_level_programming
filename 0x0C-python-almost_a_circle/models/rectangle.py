@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This method contain a Rectangle class which inherit Base"""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
