@@ -47,17 +47,17 @@ class Rectangle(Base):
         return self.__y
 
     @width.setter
-    def width(self, width):
-        self.__width = width
+    def width(self, value):
+        self.__width = value
 
     @height.setter
-    def height(self, height):
-        self.__height = height
+    def height(self, value):
+        self.__height = value
 
     @x.setter
-    def x(self, x):
-        self.__x = x
+    def x(self, value):
+        self.__x = value
 
     @y.setter
-    def y(self, y):
-        self.__y = y
+    def y(self, value):
+        self.__y = value
