@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This method contain a Rectangle class which inherit Base"""
+
 from models.base import Base
 
 
@@ -17,33 +17,33 @@ class Rectangle(Base):
     @property
     def width(self):
         if not isinstance(self.__width, int):
-            raise TypeError("{self.__width} must be an integer")
+            raise TypeError(f"{self.__width} must be an integer")
         if self.__width <= 0:
-            raise ValueError("{self.__width} must be > 0")
+            raise ValueError(f"{self.__width} must be > 0")
         return self.__width
 
     @property
     def height(self):
         if not isinstance(self.__height, int):
-            raise TypeError("{self.__height} must be an integer")
+            raise TypeError(f"{self.__height} must be an integer")
         if self.__height <= 0:
-            raise ValueError("{self.__height} must be > 0")
+            raise ValueError(f"{self.__height} must be > 0")
         return self.__height
 
     @property
     def x(self):
         if not isinstance(self.__x, int):
-            raise TypeError("{self.__x} must be an integer")
+            raise TypeError(f"{self.__x} must be an integer")
         if self.__x < 0:
-            raise ValueError("{self.__x} must be >= 0")
+            raise ValueError(f"{self.__x} must be >= 0")
         return self.__x
 
     @property
     def y(self):
         if not isinstance(self.__y, int):
-            raise TypeError("{self.__y} must be an integer")
+            raise TypeError(f"{self.__y} must be an integer")
         if self.__y < 0:
-            raise ValueError("{self.__y} must be >= 0")
+            raise ValueError(f"{self.__y} must be >= 0")
         return self.__y
 
     @width.setter
