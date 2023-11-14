@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
+"""This module is the implementation of the a rectangle class which inherits from base class and perform varied operations
+"""
 from models.base import Base
-
-
 class Rectangle(Base):
-    """This Rectangle class inherits from Base class and contains various methods used for performing various functions as can be observed from the code."""
+    """This Rectangle class inherits from Base class and contains various methods used for performing various functions as can be observed from the code.
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -143,3 +143,32 @@ class Rectangle(Base):
         - str: A formatted string representing the Rectangle instance.
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+
+    def update(self, *args, **kwargs):
+        """
+        Assigns arguments to the attributes of the Rectangle instance in the following order:
+        1st argument: id attribute
+        2nd argument: width attribute
+        3rd argument: height attribute
+        4th argument: x attribute
+        5th argument: y attribute
+
+        Parameters:
+        - *args: Variable number of positional arguments.
+        - **kwargs: Variable number of keyword argument
+        """
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+            if len(args) > 2:
+                self.height = args[2]
+            if len(args) > 3:
+                self.x = args[3]
+            if len(args) > 4:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
