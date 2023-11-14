@@ -3,10 +3,10 @@
 from models.base import Base
 
 class Rectangle(Base):
-    """This Rectangle class inherits from Base class"""
+    """This Rectangle class inherits from Base class and contain various methods use for perforning various function as can be observed from the code based"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """This function writes the class Rectangle that inherits from Base"""
+        """This function writes the class Rectangle that inherits from Base and contain the setters and getters which does operations like calculatinng tha atrea of rectangle and so on"""
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -69,7 +69,7 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
-        return "F[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__x}/{self._height_y}"
+        return F"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
 
 
