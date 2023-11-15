@@ -41,3 +41,36 @@ class Square(Rectangle):
         - str: A formatted string representing the Square instance.
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        """This function adds a public method that assigns attributes using args and kwargs in this order:
+        1st argument: id attribute
+        2nd argument: size attribute
+        3rd argument: x attribute
+        4th argument: y attribute
+
+        Parameters:
+        - args: Variable positional number of arguments
+        - kwargs: Variable number of keyword arguments
+        """
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.size = args[1]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 3:
+                self.y = args[3]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        
+            def to_dictionary(self):
+                """This function returns the dictionary representation of a Square"""
+                return{
+                    'id' : self.id,
+                    'size' : self.size,
+                    'x'   : self.x,
+                    'y'   : self.y
+            }

@@ -147,7 +147,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-        Assigns arguments to the attributes of the Rectangle instance in the following order:
+        This function assigns arguments to the attributes of the Rectangle instance in the following order:
         1st argument: id attribute
         2nd argument: width attribute
         3rd argument: height attribute
@@ -172,3 +172,14 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+
+    def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
+        return {
+        'id': self.id,
+        'width': self.width,
+        'height': self.height,
+        'x': self.x,
+        'y': self.y
+        }
