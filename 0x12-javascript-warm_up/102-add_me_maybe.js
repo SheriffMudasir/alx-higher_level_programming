@@ -1,4 +1,4 @@
 #!/usr/bin/node
 module.exports = function (number, theFunction) {
-    theFunction(number + 1);
+  theFunction(number + 1);
 };
