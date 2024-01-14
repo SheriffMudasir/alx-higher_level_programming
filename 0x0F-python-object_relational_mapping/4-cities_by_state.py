@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-This script list all states from the database hbtn_0e_0_usa
+This module lists all cities from the database hbtn_0e_4_usa
 """
 
 import MySQLdb
 import sys
 
 
-def select_states(username, password, db_name):
+def cities_by_state(username, password, db_name):
     """
-    This function retrieves and list all states from MySQL database
+    This function retrieves and lists all cities from the database hbtn_0e_4_usa
     """
 
     conn = MySQLdb.connect(
@@ -20,9 +20,9 @@ def select_states(username, password, db_name):
         db=db_name,
         charset="utf8"
     )
-    cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM cities ORDER BY cities.id")
 
     for row in cur.fetchall():
         print(row)
@@ -36,4 +36,4 @@ if __name__ == "__main__":
         sys.exit(1)
     username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
 
-    select_states(username, password, db_name)
+    cities_by_state(username, password, db_name)
