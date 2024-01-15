@@ -21,7 +21,9 @@ def filter_cities(username, password, db_name, name):
     )
 
     cur = conn.cursor()
-    mysql_query = "SELECT * FROM cities WHERE state_id=(SELECT id FROM states WHERE name=%s) ORDER BY id ASC"
+    mysql_query = "SELECT * FROM cities WHERE state_id IN (SELECT id FROM states WHERE name=%s) ORDER BY id ASC"
+
+    cur.execute(mysql_query, (name,))
 
     cities = [cities_row[2] for cities_row in cur.fetchall()]
     print(', '.join(cities))
@@ -37,3 +39,4 @@ if __name__ == "__main__":
     username, password, db_name, name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
     filter_cities(username, password, db_name, name)
+

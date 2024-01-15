@@ -32,8 +32,11 @@ def my_safe_filter_states(username, password, db_name, name):
 
 
 if __name__ == "__main__":
-    if (sys.argv != 4):
+    if len(sys.argv) != 5:
+        print("Usage: {} username password db_name name".format(sys.argv[0]))
         sys.exit(1)
+
     username, password, db_name, name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
     my_safe_filter_states(username, password, db_name, name)
+
