@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module contain a method which finds the peak number
+"""
 
 def find_peak(list_of_integers):
     """This function find a peak in a list of unsorted integers."""
