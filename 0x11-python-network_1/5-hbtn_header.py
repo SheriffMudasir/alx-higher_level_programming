@@ -8,6 +8,6 @@ import sys
 url = sys.argv[1]
 response = requests.get(url)
 
-value = response.header.get('X-Request-Id')
+value = response.headers.get('X-Request-Id')
 if value:
     print(value)

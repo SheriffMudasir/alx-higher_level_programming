@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 This module contain a script that takes your GitHub credentials (username and password) and uses the GitHub API to display your id
 """
