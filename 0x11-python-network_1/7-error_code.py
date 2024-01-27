@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contain script that takes in a URL, sends a request to the URL and displays the body of the response.
+This module contain script that takes in a URL,
 """
 import requests
 import sys
